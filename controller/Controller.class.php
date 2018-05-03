@@ -119,12 +119,17 @@ class Controller
 
     $router->any('/dmca', 'ReportActions::executeDmca');
 
-    $router->any('/youtube/thanks', 'AcquisitionActions::executeThanks');
     $router->any('/youtube/sub', 'AcquisitionActions::executeYouTubeSub');
-    $router->any('/youtube/{campaignId:c}?', 'AcquisitionActions::executeYouTube');
-    $router->any('/yt2', 'AcquisitionActions::executeYT2');
+    $router->post('/youtube/edit', 'AcquisitionActions::executeYoutubeEdit');
+    $router->post('/youtube/token', 'AcquisitionActions::executeYoutubeToken');
+    $router->any('/youtube/status/{token}', 'AcquisitionActions::executeYoutubeStatus');
+    $router->any('/youtube', 'AcquisitionActions::executeYouTube');
+    $router->any('/youtube/status', 'AcquisitionActions::executeRedirectYoutube');
+
     $router->get('/verify/{token}', 'AcquisitionActions::executeVerify');
 
+
+    $router->get('/news/category/{category}', 'ContentActions::executePostCategoryFilter');
 
     $router->post('/set-culture', 'i18nActions::setCulture');
 
@@ -135,6 +140,7 @@ class Controller
       '/art'                                => '/what',
       '/why'                                => '/learn',
       '/feedback'                           => '/learn',
+      '/joinus'                             => '/join-us',
       '/faq/when-referral-payouts'          => '/faq/referrals',
       '/faq/why-care-about-lbry'            => '/get',
       '/news/meet-the-lbry-founders'        => '/team',
