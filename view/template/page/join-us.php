@@ -1,5 +1,5 @@
-<?php Response::setMetaDescription('Like contributing to digital freedom and making money? Why not both? LBRY is hiring!') ?>
-<?php Response::addMetaImage('https://spee.ch/@lbryteam/everyone.jpg') ?>
+<?php Response::setMetaDescription('Like contributing to digital freedom or making money? Why not both? LBRY is hiring!') ?>
+<?php Response::addMetaImage('https://spee.ch/@lbryteam:6/everyone.jpg') ?>
 <?php echo View::render('nav/_header', ['isDark' => false]) ?>
 <main>
   <section class="post-content">
@@ -13,7 +13,7 @@
         curiosity, you've come to the right place.
       </p>
 
-      <img src="https://spee.ch/@lbryteam:6/everyone.jpg" alt="LBRY Team Photo from November 2017" />
+      <img src="https://spee.ch/@lbryteam:6/everyone-apr-2018.jpg" alt="LBRY Team Photo from April 2018" />
       <div class="meta text-center spacer1">
         Fortunately, photo shoots are not a regular job activity.
       </div>
@@ -70,105 +70,76 @@
 
 
       <h2 id="positions">Positions</h2>
-      <em>If a position is marked paused, you are still welcome to contact us. For blockchain, protocol, and application engineers, we will be hiring regularly throughout 2018.</em>
-      <div>
-        <h3 id="blockchain-engineer">Blockchain Engineer <span class="badge badge-primary">Active</span></h3>
-        <p>
-          This position involves working directly on the LBRY <a href="https://github.com/lbryio/lbrycrd">blockchain</a>, written in C++.
-        </p>
-        <p>
-          Competence with cryptography, security, and networks is mandatory. Experience with blockchain is beneficial but not required.
-        </p>
-        <p>
-          Blockchain work is like being a goalkeeper: good work goes under-appreciated, but mistakes are catastrophic. You must be the kind of masochist that enjoys this.
-        </p>
-        <h3 id="protocol-engineer">Protocol Engineers <span class="badge badge-info">Paused</span></h3>
-        <p>
-          The LBRY protocol consists of a <a href="https://lbry.io/api">set of APIs</a> provided via a daemon. This daemon is comprised of several sub-components, and interacts with the blockchain, wallet, and other remote daemons that constitute the LBRY data network.
-        </p>
-        <p>
-          The LBRY <a href="https://github.com/lbryio/lbry">daemon</a> and <a href="https://github.com/lbryio/lbryum">wallet</a> are both written in Python, but maybe you're the one to rewrite them in Go (we're kidding) (probably).
-        </p>
-        <p>Competence with security, operating systems, and networks is mandatory. Experience with peer-to-peer technology is beneficial but not required.</p>
+      <?php echo View::render('content/_jobs')  ?>
 
-        <h3 id="web-developer">Web Developer <span class="badge badge-info">Paused</span></h3>
-        <p>
-          We're seeking someone to manage <a href="https://github.com/lbryio/lbry.io">this very website</a>, as well as other LBRY web properties and projects.
-        </p>
-        <p>
-          This position involves both design and programming elements and is good for someone with a mix of creativity and logic.
-          The LBRY website currently uses a moderate amount of PHP, but you be the product owner and have full control over the implementation.
-        </p>
-      </div>
-      <h2 id="applying">Applying</h2>
-      <h4 id="how-to-apply">How To Apply</h4>
+      <h2 id="applying">Hiring Process</h2>
       <p>
-        Contact <a href="mailto:joinus@lbry.io">joinus@lbry.io</a> if interested in a position. Please include the following:
+        Click "Apply" next to any job listed above to begin the process. We use a 3-step hiring process:
       </p>
       <ol>
-        <li>A resume, LinkedIn profile, or other resource that would serve as a work history.</li>
-        <li>A code sample. Preferably a link to a public repository for a project you have built or significantly contributed to.</li>
-        <li>One sentence about why you'd like to work for LBRY.</li>
-      </ol>
-
-      <h4 id="process">The Process</h4>
-      <p>
-        We use a 3-step hiring process:
-      </p>
-      <ol>
-        <li>A brief (20-30 minute) non-technical, introductory phone call with either the CEO or CTO.</li>
+        <li>A brief (30 minute max), non-technical, introductory phone call with either the CEO, CTO, or appropriate lead.</li>
         <li>
-          <p>A compensated code contribution (4 hours minimum) on the repository you'd be working on.</p>
+          <p>
+            All technical hires are required to complete compensated code contribution on the repository they'd be working on.
+            Non-technical hires will also be asked to complete a compensated trial task after they apply and complete step 1.
+          </p>
+          <p>
+            Issues tagged "good first issue" are suitable for this purpose, though you are welcome to work on another issue or even something not filed at all.
+          </p>
           <table class="full-table">
             <thead>
               <tr>
-                <th>Project</th>
+                <th>Project(s)</th>
                 <th>Position</th>
                 <th>Issues</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><a href="https://github.com/lbryio/lbry">lbry</a></td>
-                <td>Protocol Engineer</td>
+                <td class="center"><a href="https://github.com/lbryio/lbrycrd">lbrycrd</a></td>
+                <td class="center">Blockchain Engineer</td>
+                <td class="center"><a href="https://github.com/lbryio/lbrycrd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a></td>
+              </tr>
+              <tr>
+                <td class="center">
+                  <a href="https://github.com/lbryio/lbry">lbry (daemon)</a><br/>
+                  <a href="https://github.com/lbryio/lbryum">lbryum (wallet)</a>
+                </td class="center">
+                <td class="center">Protocol Engineer</td>
                 <td><a href="https://github.com/lbryio/lbry/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a></td>
               </tr>
               <tr>
-                <td><a href="https://github.com/lbryio/lbry-app">lbry-app</a></td>
-                <td>Application or UX Engineer</td>
-                <td><a href="https://github.com/lbryio/lbry-app/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a></td>
+                <td class="center">
+                  <a href="https://github.com/lbryio/lbry-app">lbry-desktop</a><br/>
+                  <a href="https://github.com/lbryio/lbry-android">lbry-android</a><br/>
+                  <a href="https://github.com/lbryio/spee.ch">spee.ch</a>
+                </td>
+                <td class="center">Lead Application Engineer</td>
+                <td class="center"><a href="https://github.com/lbryio/lbry-app/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a></td>
               </tr>
               <tr>
-                <td><a href="https://github.com/lbryio/lbrycrd">lbrycrd</a></td>
-                <td>Blockchain Engineer</td>
-                <td><a href="https://github.com/lbryio/lbrycrd/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a></td>
-              </tr>
-              <tr>
-                <td><a href="https://github.com/lbryio/lbry.io">lbry.io</a></td>
-                <td>Web Developer</td>
-                <td><a href="https://github.com/lbryio/lbry.io/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22">good first issues</a></td>
+                <td class="center"><em>(not public)</em></td>
+                <td class="center">API engineer</td>
+                <td class="center">contact us / apply first</td>
               </tr>
             </tbody>
           </table>
           <p>
-            We ask all potential full-time contributors to take on a potential issue on the project they'd be working on. Issues tagged "good first issue" are suitable for this purpose, though you are welcome to work on another issue or even something not filed at all.
-          </p>
-          <p>
             The issue you choose does not necessarily need to be fully completed, and we don't expect a perfect first contribution. Open a pull request as soon as you'd like any feedback from one of our developers. We compensate at or above market rates for all accepted pull requests.
           </p>
           <p>
-            For questions or problems with a particular issue, please comment directly on the GitHub issue. For setup or environment trouble, open a separate issue. You can also join #dev in <a href="https://chat.lbry.io">our chat</a> to interact with other community members.
+            For questions or problems with a particular issue, please comment directly on the GitHub issue. For setup or environment trouble, open a separate issue or email the contact listed in the project <code>README</code>. You can also join #dev in <a href="https://chat.lbry.io">our chat</a> to interact with other community members.
           </p>
         </li>
         <li>
-          <p>A longer (1-2 hours) meeting with the team members you'd be working directly with, as well as the CEO and/or CTO.</p>
+          <p>A longer meeting with the team members you'd be working directly with, as well as the CEO and/or CTO.</p>
         </li>
       </ol>
       <p>Steps 1 and 2 may be completed in either order (i.e. you're welcome to try contributing before the introductory call).</p>
 
       <h2 id="referrals">Referrals</h2>
       <p>
-        Know someone who'd be a great fit? Tell them about us, send them a link this page, or show up at their house unexpectedly with a
+        Know someone who'd be a great fit? Tell them about us, send them a link to this page, or show up at their house unexpectedly with a
         box of candy and a persuasive pitch. If we hire them, we'll pay you $5,000. That's what we call a win-win.
       </p>
 
